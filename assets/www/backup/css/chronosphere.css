@@ -1,0 +1,141 @@
+.chronos-picker-bg {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	background-image: url("images/common/date_time/bg_date_time_popup.png");
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+.chronos-picker-header {
+	width: 94%;
+	height: 17%;
+	margin-top: 3%;
+	margin-left: 3%;
+}
+.chronos-picker-content {
+	height: 50.5%;
+	width: 94%;
+	margin-left: 3%;
+}
+.chronos-picker-content-left {
+	height: 93%;
+	width: 51%;	
+	margin: 1.5% 0 0 1%;
+}
+.chronos-picker-content-right {
+	height: 93%;
+	width: 43%;
+	margin: 1.5% 0 0 1%;
+}
+.chronos-picker-footer {
+	height: 21%;
+	width: 94%;
+	margin-left: 3.2%;
+}
+.chronos-picker-cancel-btn {
+	height: 99px;
+	width: 179px;
+	background-image: url("images/common/questionare/btn_black_background.png");
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	text-align: center;
+}
+.medium-size-picker-control-container {
+	height: 185px;
+	width: 110px;
+	margin-top: 3.5%;
+	margin-left: 3%;
+}
+.large-size-picker-control-container {
+	height: 185px;
+	width: 134px;
+	margin-top: 3.5%;
+	margin-left: 3%;
+}
+.small-size-picker-control-container {
+	height: 190px;
+	width: 95px;
+	margin-top: 4.5%;
+	margin-left: 4%;
+}
+.picker-plus-btn-medium {
+	height: 58px;
+	width: 110px;
+	background-image: url("images/common/date_time/plus_month_&_day.png");
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+.picker-display-field-medium {
+	height: 68px;
+	width: 110px;
+	background-image: url("images/common/date_time/field_month_&_day.png");
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	text-align: center;
+}
+.picker-minus-btn-medium {
+	height: 58px;
+	width: 110px;
+	background-image: url("images/common/date_time/minus_month_&_day.png");
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+.picker-plus-btn-large {
+	height: 58px;
+	width: 133px;
+	background-image: url("images/common/date_time/plus_year.png");
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+.picker-display-field-large {
+	height: 68px;
+	width: 133px;
+	background-image: url("images/common/date_time/field_year.png");
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	text-align: center;
+}
+.picker-minus-btn-large {
+	height: 58px;
+	width: 133px;
+	background-image: url("images/common/date_time/minus_year.png");
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+.picker-plus-btn-small {
+	height: 58px;
+	width: 95px;
+	background-image: url("images/common/date_time/plus_hour_&_minute.png");
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+.picker-display-field-small {
+	height: 68px;
+	width: 95px;
+	background-image: url("images/common/date_time/field_hour_&_minute.png");
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	text-align: center;
+}
+.picker-minus-btn-small {
+	height: 58px;
+	width: 95px;
+	background-image: url("images/common/date_time/minus_hour_&_minute.png");
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+.chronos-picker-text-big {width: 135px;}
+.chronos-picker-text-small {width: 95px;}
+.chronos-picker-text-time-format {
+	width: 98px;
+	margin-top: 1%;
+}
+.picker-control-time-format {
+	height: 63px;
+	width: 98px;
+	background-image: url("images/common/date_time/bg_am_pm.png");
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	margin-top: 22%;
+	margin-left: 4%;
+}

@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory 
+        android:title="AFM Vehicle Health Check Settings"
+        android:key="sup_server_details">
+        
+		 <ListPreference 
+            android:key="application_theme"
+            android:title="Application Theme"
+            android:summary="Choose Theme"
+            android:defaultValue="Toyota" 
+            android:entries="@array/supportedThemes"
+            android:entryValues="@array/supportedThemes"
+        />      
+        
+		 <ListPreference 
+            android:key="font_size"
+            android:title="Font Size"
+            android:summary="Choose Font Size"
+            android:defaultValue="Normal" 
+            android:entries="@array/supportedFonts"
+            android:entryValues="@array/supportedFonts"
+        />       
+        
+        
+        <SwitchPreference
+            android:key="logging_config"
+            android:summary="Enable or disable Application Logs"
+            android:title="Application Logs"
+            android:switchTextOn="Enabled"
+            android:switchTextOff="Disabled"
+            />
+        
+       <SwitchPreference
+            android:key="question_restrictions"
+            android:summary="Question Restriction"
+            android:title="Question Restriction"
+            android:switchTextOn="Enabled"
+            android:switchTextOff="Disabled"
+            />
+        
+        <ListPreference 
+            android:key="registration_protocol"
+            android:title="Registration Protocol"
+            android:summary="Choose Protocol"
+            android:defaultValue="http" 
+            android:entries="@array/supportedProtocols"
+            android:entryValues="@array/supportedProtocols"
+        />   
+        
+         <ListPreference 
+            android:key="connection_protocol"
+            android:title="Connection Protocol"
+            android:summary="Choose Protocol"
+            android:defaultValue="http" 
+            android:entries="@array/supportedProtocols"
+            android:entryValues="@array/supportedProtocols"
+        />   
+        
+        <SwitchPreference 
+            android:key="relay_server_enabled"
+            android:summary="Enable or disable Relay Server"
+            android:title="Relay Server" 
+            android:defaultValue="false"
+            android:switchTextOn="Enabled"
+            android:switchTextOff="Disabled"
+        />
+        
+        
+            
+    </PreferenceCategory>
+
+    <PreferenceCategory 
+        android:title="Relay Server Configuration"
+        android:key="relay_server_configurations">
+
+       <EditTextPreference
+            android:key="relay_server"
+            android:title="Relay Server" 
+            android:summary="Provide the relay server host name"
+            android:dialogTitle="Relay Server"
+            android:dialogMessage="Provide relay server host name"    
+            android:defaultValue="relayserver.sybase.com"
+            android:enabled="true" 
+            android:dependency="relay_server_enabled"
+            android:shouldDisableView="true"/>
+       
+       <EditTextPreference
+            android:key="relay_rbs_port"
+            android:title="RBS Port" 
+            android:summary="Provide port for Replication Based Synchronization"
+            android:dialogTitle="RBS Port"
+            android:dialogMessage="Provide port for Replication Based Synchronization"    
+            android:defaultValue="80"
+            android:enabled="true" 
+            android:dependency="relay_server_enabled"
+            android:shouldDisableView="true"/>
+       
+       <EditTextPreference
+            android:key="relay_mbs_port"
+            android:title="MBS Port" 
+            android:summary="Provide port for Message Based Synchronization"
+            android:dialogTitle="MBS Port"
+            android:dialogMessage="Provide port for Message Based Synchronization"    
+            android:defaultValue="80"
+            android:enabled="true" 
+            android:dependency="relay_server_enabled"
+            android:shouldDisableView="true"/>
+    
+    
+    <EditTextPreference
+            android:key="relay_farm_id_rbs"
+            android:title="Farm ID for RBS" 
+            android:summary="Provide Farm ID for RBS"
+            android:dialogTitle="Farm ID for RBS"
+            android:dialogMessage="Provide Farm ID for RBS"    
+            android:defaultValue="AFMQ.MOBRBS"
+            android:enabled="true" 
+            android:dependency="relay_server_enabled"
+            android:shouldDisableView="true"/>
+    
+        <EditTextPreference
+            android:key="relay_farm_id_mbs"
+            android:title="Farm ID for MBS" 
+            android:summary="Provide Farm ID for MBS"
+            android:dialogTitle="Farm ID for MBS"
+            android:dialogMessage="Provide Farm ID for MBS"    
+            android:defaultValue="AFMQ.MOBMBS"
+            android:enabled="true" 
+            android:dependency="relay_server_enabled"
+            android:shouldDisableView="true"/>
+    </PreferenceCategory>
+    
+    <PreferenceCategory 
+        android:title="SUP Server Configurations"
+        android:key="sup_server_configurations">
+
+<EditTextPreference
+            android:key="sup_server"
+            android:title="SUP Server" 
+            android:summary="Provide the SUP server host name"
+            android:dialogTitle="SUP Server"
+            android:dialogMessage="Provide SUP server host name"    
+            android:defaultValue="10.224.22.67"
+            android:enabled="true" 
+            
+            />
+       
+       <EditTextPreference
+            android:key="sup_rbs_port"
+            android:title="RBS Port" 
+            android:summary="Provide port for Replication Based Synchronization"
+            android:dialogTitle="RBS Port"
+            android:dialogMessage="Provide port for Replication Based Synchronization"    
+            android:defaultValue="2480"
+            android:enabled="true" 
+            
+            />
+        
+       
+       <EditTextPreference
+            android:key="sup_mbs_port"
+            android:title="MBS Port" 
+            android:summary="Provide port for Message Based Synchronization"
+            android:dialogTitle="MBS Port"
+            android:dialogMessage="Provide port for Message Based Synchronization"    
+            android:defaultValue="5001"
+            android:enabled="true" 
+            
+			/>       
+    
+    
+    
+    <EditTextPreference
+            android:key="sup_farm_id_rbs"
+            android:title="Farm ID for RBS" 
+            android:summary="Provide Farm ID for RBS"
+            android:dialogTitle="Farm ID for RBS"
+            android:dialogMessage="Provide Farm ID for RBS"    
+            android:defaultValue=""
+            android:enabled="true" 
+            
+           	/>
+    
+        <EditTextPreference
+            android:key="sup_farm_id_mbs"
+            android:title="Farm ID for MBS" 
+            android:summary="Provide Farm ID for MBS"
+            android:dialogTitle="Farm ID for MBS"
+            android:dialogMessage="Provide Farm ID for MBS"    
+            android:defaultValue=""
+            android:enabled="true" 
+            
+			/>
+
+    </PreferenceCategory>
+    
+</PreferenceScreen>

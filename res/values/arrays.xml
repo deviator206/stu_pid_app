@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string-array name="supportedThemes">
+        <item name="Toyota">Toyota</item>
+        <item name="Lexus">Lexus</item>
+    </string-array>	
+    	<string-array name="supportedProtocols">
+        <item name="http">http</item>
+        <item name="https">https</item>
+    </string-array>
+   <string-array name="supportedFonts">
+        <item name="Normal">Normal</item>
+        <item name="Large">Large</item>
+    </string-array>
+</resources>

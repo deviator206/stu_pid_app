@@ -1,0 +1,436 @@
+@font-face {
+	font-family: 'Nobel-Regular';
+	src: url('font/lexus/Nobel-Regular.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Nobel-Light';
+	src: url('font/lexus/Nobel-Light.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Nobel-Book';
+	src: url('font/lexus/Nobel-Book.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Nobel-Bold';
+	src: url('font/lexus/Nobel-Bold.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+.ui-btn-inner {
+	font-size: 28px !important;
+	font-family: Nobel–Bold;
+	color: #FFFFFF;
+	padding: 18% 0% 0 20% !important;
+	white-space: nowrap;
+}
+.logo {
+	background: url('images/lexus/branding_image.png') no-repeat center center;
+	background-size: 100% 100%;
+	width: 416px;
+	height: 72px;
+	margin: 1.7% 0 0 1%;
+}
+.btn-layout {
+	background: url('images/lexus/btn_bg.png') no-repeat center center;
+	background-size: 100% 100%;
+	width: 179px;
+	height: 97px;
+	border: none;
+	border-radius: 0px;
+}
+.right-reserved-text {
+	color: #2F2F2F;
+	font-size: 14px;
+	font-family: Nobel-Regular;
+	margin: 6% 0 0% 14%;
+	text-shadow:none;
+}
+.app-name {
+	font-size: 70px;
+	text-align: center;
+	color: #292929;
+	font-family: Nobel-Regular;
+	line-height: 74px;
+}
+.text-field-bg input {
+	color: #59595C;
+	font-size: 44px;
+	font-family: Nobel-Regular;
+	line-height: 64px;
+}
+.text-field-bg  input::-webkit-input-placeholder {
+	color: #59595C;
+}
+.login-error-icon {
+	background: url('images/common/error-icon.png') no-repeat center center;
+	background-size: 100% 100%;
+	height: 32px;
+	width: 32px;
+	float: left;
+}
+.login-error {
+	color: red;
+	font-size: 20px;
+	float: left;
+	margin: 1% 0 0 3%;
+	width: 82%;
+}
+.search-page-bg {
+	background: url('images/lexus/main_bg.png') no-repeat center center;
+	background-size: 100% 100%;
+	width: 1024px !important;
+}
+.search-text-field-bg input {
+	color: #59595B;
+	font-size: 54px;
+	font-family: Nobel-Regular;
+	line-height: 108px;
+}
+.search-text-field-bg  input::-webkit-input-placeholder {
+	color: #59595B;
+}
+.ui-btn-layout {
+	background: gray;
+	border: 1px solid black;
+	border-radius: 7px;
+	color: white !important;
+	margin: 4% 0 4% 35%;
+	text-shadow: none;
+	width: 30%;
+}
+.search-input-text {
+	font-size: 58px;
+	font-family: Nobel-Regular;
+	color: #3D3D3D;
+	margin: 3% 0 3% 0;
+	text-align: center;
+}
+.pending-job-text {
+	text-align: center;
+	font-family: Nobel-Regular;
+	padding-top: 2%;
+	font-size: 38px;
+	color: #3D3D3D;
+}
+.no-pending-job-text {
+	text-align: center;
+	font-size: 28px;
+	font-family: Nobel-Regular;
+	text-shadow: none;
+	padding-top: 3%;
+	color: #0062a9;
+	display: none;
+}
+.search-header-text {
+	color: #3D3D3D;
+	font-size: 44px;
+	font-family: Nobel-Regular;
+	text-align: center;
+	padding-top: 2.2%;
+	width: 90%;
+}
+.vehicle-list-layout {
+	color: #0062A9;
+	font-size: 24px;
+	font-family: Nobel-Regular;
+	line-height: 44px;
+	width: 78%;
+	margin-left: 14%;
+}
+.search-result-layout {
+	font-size: 28px;
+	font-family: Nobel-Book;
+	color: #3D3D3D;
+	padding: 0.2% 0 0 19% !important;
+	width:73%;
+}
+.vehicle-details-left-content {
+	font-family: Nobel-Book;
+	font-size: 38px;
+	color: #3D3D3D;
+	line-height: 74px;
+	width: 48% !important;
+	padding: 1.3% 0;
+}
+.vehicle-details-right-content {
+	font-family: Nobel-Regular;
+	font-size: 34px;
+	color: #0062A9;
+	line-height: 74px;
+	width: 48% !important;
+	padding: 1.3% 0;
+}
+.pending-job-img {
+	background: url('images/lexus/icn_inprocess.png') no-repeat center center;
+	background-size: 100% 100%;
+	height: 40px;
+	width: 40px !important;
+	margin-left: 10%;
+	margin-top: 10px;
+	display:none;
+}
+.attention-count-bg {
+	border: 1px solid #0062a9 !important;
+	background-color: #0062a9;
+	margin-left: 5%;
+}
+.gear-face-label {
+	font-family: Nobel-Regular;
+	font-size: 20px;
+	font-weight: bold;
+	color: #0C0C0C;
+	text-align: left;
+	line-height: 26px;
+	margin: 0;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	width: 115px;
+}
+.attention-count, .caution-count, .ok-count {
+	width: 100%;
+	height: 20px;
+	padding: 16px 0 14px;
+	font-family: Nobel-Bold;
+	font-size: 21px;
+	color: #131313;
+	font-weight: bold;
+}
+.save-exit-btn {
+	background-image: url('images/lexus/questionare/btn_save_and_exit.png');
+	background-size: 100% 100%;	
+	width: 201px;
+	height: 113px;	
+}
+.submit-btn {	
+	background-image: url('images/lexus/questionare/btn_submit.png');
+	background-size: 100% 100%;	
+	width: 149px;
+	height: 112px;
+}
+.job-name-btn {
+	color: #0D4663 !important;
+	line-height: 26px;
+}
+.question-btn-text{
+	text-align: center;
+	font-family: Nobel-Bold;
+	font-size: 34px;
+	color: #FFF;
+	text-shadow:none;
+}
+.pad-to-perfection {
+	position: absolute;
+	padding: 4.6% 0 0 8%;
+	font-family: Nobel-Regular;
+	font-size: 32px;
+	color: #000;
+	text-shadow:none;
+	width: 10% !important;
+	font-weight: bold;
+}
+.mandatory-pad {
+	width: 60px;
+	font-family: Nobel-Regular;
+	color: #000 !important;
+	text-shadow:none;
+	font-size: 26px;
+	margin-top: -15px;
+	font-weight: bold;
+}
+.show-footer-btn {
+	background-image: url('images/lexus/questionare/bg_legends_collapse.png') ;
+	width: 5%;
+	height: 112px;	
+	margin-left: 31%;
+	display: none;
+	bottom: 0;
+	position: absolute;
+	z-index: 200;
+	background-position-x: 100%;
+	background-position-y: 0px;
+	right: 0;
+}
+.overlapping-footer {
+	background: url('images/lexus/questionare/bg_legends_expanded.png');
+	background-size: 100% 100%;
+	height: 112px;
+	width: 726px;
+	bottom: 0;
+	position: absolute;
+	z-index: 200;
+	margin-left: 95px;
+}
+.notifier-text {
+	text-align: center;
+	margin-left: 30%;
+	top: 30%;
+	position: relative;
+	font-family: Nobel-Bold;
+	font-size: 21px;
+	color: #414141;
+	font-weight: bold;
+}
+.change-color-snap-element {
+	color: #0062a9;
+}
+.pop-up-text-msg{
+	font-family:Nobel-Regular;
+	color:#3D3D3D;
+}
+.pop-up-job-id-text{
+	font-family: Nobel-Book;
+	color:#3D3D3D;
+	padding-right: 2%;
+}
+.pop-up-job-id{
+	font-family: Nobel-Book;
+	color:#0062a9;
+}
+.popup-ok-btn-text{
+	font-size: 28px !important;
+	font-family: Nobel-Bold;
+	color: white;
+	padding: 18% 0% 0 10% !important;
+	white-space: nowrap;
+	text-align: center;
+}
+.ui-red-popup {
+	background: url('images/lexus/bg_popup_red.png') no-repeat !important;
+	background-size: 100% 100% !important;
+	width:489px !important;
+	height:223px;
+}
+.custom-toggle-switch .ui-btn-active {
+	background-image: url('images/lexus/questionare/bg_yes_toggle.png') !important; 
+	background-size: 100% 100% !important;
+	border:none !important;
+	background: none ;
+	text-shadow: none !important;
+	font-family: Nobel-Regular !important;
+	font-size: 34px !important;
+	color: #FFFFFF !important;
+	line-height: 47px;
+	font-weight: normal;
+}
+.textfield-bg-specs{
+	color:#000000;
+	font-family:Nobel-Regular !important;
+	font-size: 34px;
+	font-weight: normal;
+}
+.comment-filled-img{
+	background-image: url('images/lexus/questionare/icn_comments_filled.png') !important; 
+	background-size: 100% 100%;
+	width: 56px;
+	height: 50px;
+	margin: 20% 10% 0 0;
+}
+.question-text-layout{
+	width:95%;
+	margin: 0 0 0 5%;
+	font-family: Nobel-Regular;
+	font-size: 28px;	
+	color: #0C0C0C;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	font-weight: bold;
+}
+.delete-btn-layout {
+	background: url('images/lexus/questionare/btn_red_background.png') no-repeat center center;
+	background-size: 100% 100%;
+	width: 165px;
+	height: 99px;
+	border: none;
+	border-radius: 0px;
+}
+.comment-heading-text {
+	height: 50px !important;
+	width: 380px !important;
+	text-align: center;
+	color:#3D3D3D;
+	font-family:Nobel-Regular !important;
+	font-size: 44px;
+	font-weight: normal;
+	padding-top: 6%;
+	padding-left: 25%;
+}
+.comment-bg-specs{
+	color:#3D3D3D;
+	font-family:Nobel-Regular !important;
+	font-size: 34px;
+	font-weight: normal;
+}
+.date_time_text{
+	color: #131313 !important;
+	font-family: Nobel-Regular !important;
+	font-size: 28px !important;
+	margin-left: 5%;
+	padding-top: 3%;
+	font-weight: bold;
+}
+.input_text_mobiscroll input{
+	padding: 4.5% 17%;
+	border: none;
+	background: none;
+	font-size: 28px;
+	font-weight: bold;
+	font-family: Nobel-Regular !important;
+	color: #0062a9;
+}
+.chronos-picker-set-btn {
+	height: 99px;
+	width: 165px;
+	background-image: url("images/lexus/questionare/btn_red_background.png");
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	margin-right: 3px;
+	text-align: center;
+}
+.chronos-picker-text {
+	text-align: center;
+	font-size: 42px;
+	font-weight: bold;
+	font-family: Nobel-Regular;
+	color: #0062a9 ;
+	position: absolute;
+	margin-left: 0%;
+	width: 111px;
+	margin-top: 2%;
+}
+.chronos-picker-btn-text {
+	text-align: center;
+	font-family: Nobel-Bold;
+	font-size: 32px;
+	font-weight: bold;
+	color: #FFFFFF;
+	text-shadow: none !important;
+	margin: 18% 0 0 10%;
+}
+.chronos-picker-header-text {
+	position: absolute;
+	width: 94%;
+	text-align: center;
+	font-size: 38px;
+	font-weight:bold;
+	font-family: Nobel-Regular;
+	margin-top: 5%;
+}
+.custom-toggle-switch .ui-btn-down-a{
+	text-shadow: none !important;
+	font-family: Nobel-Regular !important;
+	font-size: 30px !important;
+	color: #000000 !important;
+	font-weight: bold;
+}
+.mandatory-count{font-size: 30px;}
+.HorizontalScroller{
+	font-size: 24px;
+	font-weight: bold;
+}

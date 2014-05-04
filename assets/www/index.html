@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>ZEN</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<!-- Bootstrap -->
+		<link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+		<link rel="stylesheet" href="css/jquery.mobile-1.3.0.min.css">
+		<style>
+			.input-create-screen {
+				border-radius: 10px;
+				color: black;
+				background-color: rgb(229, 231, 228);
+			}
+
+			/*  style for creation */
+
+			.box-container {
+				border: 1px solid;
+				font-size: 17px;
+				height: 40px;
+				display: inline-table;
+				padding-top: 1%;
+				text-align: center;
+				width: 28%;
+				background: #000;
+			}
+			.right-side-space {
+				margin-right: 7.2%;
+			}
+			.center-row span, .box-container span {
+				display: table-cell;
+				vertical-align: middle;
+				text-align: center;
+				color: #FFF;
+			}
+			.row-container {
+				width: 100%;
+				float: left;
+			}
+			.center-row-container {
+				width: 28%;
+				float: left;
+			}
+			.center-row {
+				border: 1px solid;
+				margin-bottom: 10%;
+				height: 40px;
+				display: inline-table;
+				width: 100%;
+				background: #000;
+			}
+			.first-row {
+				margin-bottom: 3%;
+			}
+			.second-row-center-column {
+				border: 1px solid;
+				margin-bottom: 3%;
+				width: 40%;
+				margin: 0% 1.3% 3% 1.7%;
+				float: left;
+				height: 265px;
+			}
+			.header-title {
+				text-align: center;
+				font-size: 22px;
+				font-weight: bold;
+			}
+			.next-btn {
+				border: 4px solid gray;
+				width: 34%;
+				text-align: center;
+				height: 40px;
+				display: table-cell;
+				vertical-align: middle;
+				border-radius: 7px;
+				background: gainsboro;
+				font-weight: bold;
+				font-size: 22px;
+			}
+			.next-btn-container {
+				margin: 10% 0 0 28%;
+			}
+			.center-screen-column {
+				display: inline-block;
+				xborder: 1px solid;
+				width: 30%;
+				height: 59px;
+				margin-top: 5%;
+				margin-left: 1.5%;
+			}
+
+			.camera-img {
+				background-image: url("img/camera.png");
+				background-repeat: no-repeat;
+				background-size: 100% 100%;
+			}
+
+			.battery-img {
+				background-image: url("img/battery.png");
+				background-repeat: no-repeat;
+				background-size: 100% 100%;
+			}
+
+			.dualsim-img {
+				background-image: url("img/dualsim.png");
+				background-repeat: no-repeat;
+				background-size: 100% 100%;
+			}
+
+			.fullhd-img {
+				background-image: url("img/fullhd.png");
+				background-repeat: no-repeat;
+				background-size: 100% 100%;
+			}
+
+			.glovetouch-img {
+				background-image: url("img/glovetouch.png");
+				background-repeat: no-repeat;
+				background-size: 100% 100%;
+			}
+			.microsd-img {
+				background-image: url("img/microsd.png");
+				background-repeat: no-repeat;
+				background-size: 100% 100%;
+			}
+			.pixelmaster-img {
+				background-image: url("img/pixelmaster.png");
+				background-repeat: no-repeat;
+				background-size: 100% 100%;
+			}
+			.touchpanel-img {
+				background-image: url("img/touchpanel.png");
+				background-repeat: no-repeat;
+				background-size: 100% 100%;
+			}
+
+			.default-img {
+				background-image: url("img/default.png");
+				background-repeat: no-repeat;
+				background-size: 100% 100%;
+			}
+
+			.screen-title {
+				font-size: 2em;
+				font-weight: bold;
+				color: black;
+				text-decoration: underline;
+				text-align: center;
+			}
+
+			.toast-look-like {
+				font-size: 1em;
+				font-weight: bold;
+				color: black;
+				text-align: center;
+				border-radius: 10px;
+				border: 2px black solid;
+				opacity: 0;
+			}
+
+			div {
+				-webkit-transition: opacity 1s; /* For Safari 3.1 to 6.0 */
+				transition: opacity 1s;
+			}
+
+			#phn_img {
+				background-image: url("img/img-zen.png");
+				background-repeat: no-repeat;
+				background-size: 100% 100%;
+			}
+
+			#zoomed-fone {
+				background-image: url("img/Screen4.png");
+				background-repeat: no-repeat;
+				background-size: 100% 100%;
+				width: 100%;
+				height: 640px;
+			}
+		</style>
+	</head>
+	<body>
+
+		<div id="loading"  data-role="page" class="container" style="display: block">
+			<h1> loading ...</h1>
+		</div>
+		<div id="landing" data-role="page" class="container" style="display: none">
+			<div class="row screen-title">
+				Asus
+
+			</div>
+			<div class="row" style="margin-left: 7%;">
+				<textarea  class="input-create-screen" cols="30" rows="15" disabled="true" style="border-radius: 10px;"> testing</textarea>
+			</div>
+			<div class="row" style="margin-left: 21%;">
+				<button type="button" class="btn btn-default" id="create_dream_phone" >
+					Create Dream Phone
+				</button>
+
+			</div>
+		</div>
+		<div id="dreamfonecreation" class="container" style="display: none">
+			<div class="row">
+				<div class="col-sm-6 screen-title col-sm-offset-1">
+					Dream Fone
+				</div>
+				<div class="col-sm-6 col-sm-offset-1" style="padding-bottom: 10px;">
+
+					<div id="toast" class="toast-look-like">
+						Check
+					</div>
+
+				</div>
+			</div>
+
+			<div class='main-conatiner' >
+				<div class='row-container first-row'>
+					<div id="d_0" class='box-container camera-img right-side-space dragable'></div>
+					<div id="d_1"class='box-container battery-img right-side-space dragable'>
+
+					</div>
+					<div id="d_2"  class='box-container dualsim-img dragable'>
+
+					</div>
+				</div>
+				<div class='row-container'>
+					<div class='center-row-container'>
+						<div id="d_3" class='center-row fullhd-img dragable' ></div>
+						<div id="d_4" class='center-row touchpanel-img dragable'></div>
+						<div id="d_5" class='center-row default-img dragable'>
+
+						</div>
+						<div id="d_6" class='center-row default-img dragable'>
+
+						</div>
+						<div id="d_7" class='center-row pixelmaster-img dragable'>
+
+						</div>
+					</div>
+					<div id="phn_img" class='second-row-center-column' >
+						<div class='center-screen-row'>
+							<div id="cell0" class='center-screen-column dropped'></div>
+							<div id="cell1" class='center-screen-column dropped'></div>
+							<div id="cell2" class='center-screen-column dropped'></div>
+						</div>
+						<div class='center-screen-row'>
+							<div id="cell3" class='center-screen-column dropped'></div>
+							<div id="cell4" class='center-screen-column dropped'></div>
+							<div id="cell5" class='center-screen-column dropped'></div>
+						</div>
+						<div class='center-screen-row'>
+							<div id="cell6" class='center-screen-column dropped'></div>
+							<div id="cell7" class='center-screen-column dropped'></div>
+							<div id="cell8" class='center-screen-column dropped'></div>
+						</div>
+					</div>
+					<div class='center-row-container'>
+						<div id="d_8"  class='center-row default-img dragable'>
+
+						</div>
+						<div id="d_9"  class='center-row default-img dragable'>
+
+						</div>
+						<div id="d_10"  class='center-row default-img dragable'>
+
+						</div>
+						<div id="d_11" class='center-row glovetouch-img dragable'>
+
+						</div>
+						<div id="d_12"  class='center-row microsd-img dragable'>
+
+						</div>
+					</div>
+				</div>
+				<div class='row-container'>
+					<div id="d_13" class='box-container right-side-space default-img dragable'>
+
+					</div>
+					<div  id="d_14" class='box-container right-side-space default-img dragable'>
+
+					</div>
+					<div id="d_15" class='box-container default-img dragable'>
+
+					</div>
+				</div>
+			</div>
+			<div class='next-btn-container'>
+				<div class='next-btn'>
+					Next
+				</div>
+			</div>
+
+		</div>
+		<div id="dreamfonezoom" class="container" style="display: none">
+			<div id="zoomed-fone">
+				<div class='center-screen-row' >
+					<div class='center-screen-column '></div>
+					<div  class='center-screen-column'></div>
+					<div  class='center-screen-column'></div>
+				</div>
+				<div class='center-screen-row' >
+					<div id="cell_0" class='center-screen-column '></div>
+					<div id="cell_1" class='center-screen-column '></div>
+					<div id="cell_2" class='center-screen-column '></div>
+				</div>
+				<div class='center-screen-row'>
+					<div id="cell_3" class='center-screen-column '></div>
+					<div id="cell_4" class='center-screen-column '></div>
+					<div id="cell_5" class='center-screen-column '></div>
+				</div>
+				<div class='center-screen-row'>
+					<div id="cell_6" class='center-screen-column '></div>
+					<div id="cell_7" class='center-screen-column '></div>
+					<div id="cell_8" class='center-screen-column '></div>
+				</div>
+				<div class='center-screen-row '>
+					<div  class='next-btn' style="opacity: 0;" >
+						NEXT
+					</div>
+					<div  class='next-btn' style="opacity: 0;">
+						NEXT
+					</div>
+					<div id="next_btn_zoom" class='next-btn' style="opacity: 1;">
+						NEXT
+					</div>
+					<div  class='next-btn' style="opacity: 0;">
+						NEXT
+					</div>
+					<div  class='next-btn' style="opacity: 0;">
+						NEXT
+					</div>
+
+				</div>
+			</div>
+
+		</div>
+		<div id="dreamfonesignup" class="container" style="display: none">
+			<div class="row screen-title">
+				Dream Fone
+
+			</div>
+			<div class="row" style="margin-left: 7%;">
+				<textarea  class="input-create-screen" cols="30" rows="9" disabled="true" style="border-radius: 10px;"> testing</textarea>
+			</div>
+			<div class="row" style="margin-left: 14%;">
+				<input type="text" placeholder=" Enter Name"/>  
+			</div>
+			<div class="row" style="margin-left: 14%;">
+				<input type="number" placeholder=" Enter Phone Number"/>  
+			</div>
+			<div class="row" style="margin-left: 14%;">
+				<input type="email" placeholder=" Enter Email"/>  
+			</div>
+			<div class="row" style="margin-left: 25%;">
+				<button type="button" class="btn btn-default" id="submit_details" >
+					SUBMIT
+				</button>
+
+			</div>
+			
+			
+		</div>
+		<div id="restart" class="container" style="display: none"></div>
+
+		<script src="js/jquery-1.9.1.js"></script>
+		<script src="js/jquery.hammer.js"></script>
+
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/misc.js"></script>
+		<script src="js/model.js"></script>
+
+		<script src="js/signup.js"></script>
+		<script src="js/zoom.js"></script>
+		<script src="js/dreamphone.js"></script>
+		<script src="js/create.js"></script>
+
+		<script src="js/src.js"></script>
+	</body>
+</html>

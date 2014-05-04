@@ -1,0 +1,6 @@
+# view AndroidManifest.xml #generated:39
+-keep class com.afm.vhc.VHCLaunchActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:50
+-keep class com.afm.vhc.android.ApplicationSettingActivity { <init>(...); }
+
