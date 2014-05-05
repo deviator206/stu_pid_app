@@ -15,12 +15,18 @@ LandingScreen.prototype = {
 	setUp : function() {
 		this.mApplication.showScreen(this.mDivName);
 		trace(" Landing :Phn .");
-		document.getElementById("create_dream_phone").addEventListener("click",this.clickHandler.bind(this),false);
+
+		$("#" + this.mDivName).html($("#landing_screen_entity").html())
+		document.getElementById("create_dream_phone").addEventListener("click", this.clickHandler.bind(this), false);
 	},
-	clickHandler:function(evt)
-	{
+	clickHandler : function(evt) {
+		this.removeEventListener();
 		this.mApplication.nextScene();
-		
+
+	},
+
+	removeEventListener : function() {
+		document.getElementById("create_dream_phone").removeEventListener("click", this.clickHandler.bind(this), false);
 	},
 	onWrapperPush : function(cmd, data) {
 

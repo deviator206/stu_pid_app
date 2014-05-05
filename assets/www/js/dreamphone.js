@@ -18,42 +18,55 @@ DreamFoneScreen.prototype = {
 	setUp : function() {
 		this.mApplication.showScreen(this.mDivName);
 		trace(" Dream:Phn .");
-		//add dropover event
-
-		$(".dragable").hammer({
-			drag_max_touches : 0
-		}).on("dragstart", this.onDragStart.bind(this));
-		$(".dragable").hammer({
-			drag_max_touches : 0
-		}).on("drag", this.onDrag.bind(this));
-		$(".dragable").hammer({
-			drag_max_touches : 0
-		}).on("dragend", this.handleDragLeave.bind(this));
-
-		$(".dragable").hammer({
-			drag_max_touches : 0
-		}).on("click", this.clickHandler.bind(this));
-
-		$(".dropped").hammer({
-			drag_max_touches : 0
-		}).on("dragstart", this.onDragStart.bind(this));
-		$(".dropped").hammer({
-			drag_max_touches : 0
-		}).on("drag", this.onDrag.bind(this));
-		$(".dropped").hammer({
-			drag_max_touches : 0
-		}).on("dragend", this.handleDragLeave_1.bind(this));
+		$(".main-conatiner").html($("#feature_screen_entity").html())
 		
-		
-		
-		$(".next-btn-container").hammer({
-			drag_max_touches : 0
-		}).on("click", this.nextScreen.bind(this));
+			//add dropover event
+
+			$(".dragable").hammer({
+				drag_max_touches : 0
+			}).on("dragstart", this.onDragStart.bind(this));
+			$(".dragable").hammer({
+				drag_max_touches : 0
+			}).on("drag", this.onDrag.bind(this));
+			$(".dragable").hammer({
+				drag_max_touches : 0
+			}).on("dragend", this.handleDragLeave.bind(this));
+
+			$(".dragable").hammer({
+				drag_max_touches : 0
+			}).on("click", this.clickHandler.bind(this));
+
+			$(".dropped").hammer({
+				drag_max_touches : 0
+			}).on("dragstart", this.onDragStart.bind(this));
+			$(".dropped").hammer({
+				drag_max_touches : 0
+			}).on("drag", this.onDrag.bind(this));
+			$(".dropped").hammer({
+				drag_max_touches : 0
+			}).on("dragend", this.handleDragLeave_1.bind(this));
 
 		
+		
+			$("#next_btn_fone").hammer({
+				drag_max_touches : 0
+			}).on("click", this.nextScreen.bind(this));
+	
 
 	},
 
+	removeEventListener : function() {
+		$("#next_btn_fone").hammer({
+			drag_max_touches : 0
+		}).off();
+
+		$(".dropped").hammer({
+			drag_max_touches : 0
+		}).off();
+		$(".dragable").hammer({
+			drag_max_touches : 0
+		}).off();
+	},
 	onDragStart : function(event) {
 
 		var touches = event.gesture.touches;
@@ -128,7 +141,6 @@ DreamFoneScreen.prototype = {
 		//$("#cell1").addClass("camera-img ")
 	},
 
-
 	handleDragLeave_1 : function(evt) {
 
 		var prevIndex = Number(String(evt.currentTarget.id).split("cell")[1]);
@@ -161,9 +173,9 @@ DreamFoneScreen.prototype = {
 
 		}, this.toast_timer)
 	},
-	nextScreen :function()
-	{
-		this.mApplication.featuresadded = this.arrCell;	
+	nextScreen : function() {
+		this.removeEventListener();
+		this.mApplication.featuresadded = this.arrCell;
 		this.mApplication.nextScene();
 	},
 	onWrapperPush : function(cmd, data) {

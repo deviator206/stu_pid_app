@@ -15,6 +15,7 @@ var AppWrapper = function() {
 	this.nGameState = 10;
 	this.mCurrentScreen ={};
 	this.mHTMLTemplate = null;
+	this.appRestarted =false;
 	this.start();
 }
 
@@ -65,10 +66,16 @@ AppWrapper.prototype = {
 				this.mCurrentScreen = new ZoomFoneScreen(this);
 				break;
 			case 80:
-				this.nGameState = 20;
+				this.nGameState = 100;
 				
 				this.mCurrentScreen = new SignUp(this);
 				break;
+			case 100 :
+				this.nGameState = 20;
+				this.appRestarted  =true;
+				this.mCurrentScreen = new RestartScreen(this);
+			
+				break;	
 
 		}
 	},

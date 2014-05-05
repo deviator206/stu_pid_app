@@ -8,9 +8,12 @@
 		<link rel="stylesheet" href="css/jquery.mobile-1.3.0.min.css">
 		<style>
 			.input-create-screen {
-				border-radius: 10px;
+				border-radius: 20px;
 				color: black;
 				background-color: rgb(229, 231, 228);
+				padding: 10%;
+				width: 80%;
+				text-align: center;
 			}
 
 			/*  style for creation */
@@ -79,7 +82,7 @@
 				font-size: 22px;
 			}
 			.next-btn-container {
-				margin: 10% 0 0 28%;
+				margin: 10% 0 0 32%;
 			}
 			.center-screen-column {
 				display: inline-block;
@@ -176,29 +179,205 @@
 				background-size: 100% 100%;
 				width: 100%;
 				height: 640px;
+				position: absolute;
+			}
+
+			.btn-base {
+				min-width: 34%;
+				font-size: 1.4em;
+				font-weight: bold;
+			}
+
+			#zoomed_fone_overlap {
+				position: absolute;
+				z-index: 1;
+				width: 92%;
+				height: 100%;
+				margin-left: 4%;
+			}
+
+			div input {
+				width: 51%;
+				border: 2px solid;
+				padding: 1%;
 			}
 		</style>
 	</head>
 	<body>
+		<script type="text/html" id="feature_screen_entity">
 
-		<div id="loading"  data-role="page" class="container" style="display: block">
-			<h1> loading ...</h1>
-		</div>
-		<div id="landing" data-role="page" class="container" style="display: none">
-			<div class="row screen-title">
-				Asus
+			<div class='row-container first-row'>
+			<div id="d_0" class='box-container camera-img right-side-space dragable'></div>
+			<div id="d_1"class='box-container battery-img right-side-space dragable'>
+
+			</div>
+			<div id="d_2"  class='box-container dualsim-img dragable'>
+
+			</div>
+			</div>
+			<div class='row-container'>
+			<div class='center-row-container'>
+			<div id="d_3" class='center-row fullhd-img dragable' ></div>
+			<div id="d_4" class='center-row touchpanel-img dragable'></div>
+			<div id="d_5" class='center-row default-img dragable'>
+
+			</div>
+			<div id="d_6" class='center-row default-img dragable'>
+
+			</div>
+			<div id="d_7" class='center-row pixelmaster-img dragable'>
+
+			</div>
+			</div>
+			<div id="phn_img" class='second-row-center-column' >
+			<div class='center-screen-row'>
+			<div id="cell0" class='center-screen-column dropped'></div>
+			<div id="cell1" class='center-screen-column dropped'></div>
+			<div id="cell2" class='center-screen-column dropped'></div>
+			</div>
+			<div class='center-screen-row'>
+			<div id="cell3" class='center-screen-column dropped'></div>
+			<div id="cell4" class='center-screen-column dropped'></div>
+			<div id="cell5" class='center-screen-column dropped'></div>
+			</div>
+			<div class='center-screen-row'>
+			<div id="cell6" class='center-screen-column dropped'></div>
+			<div id="cell7" class='center-screen-column dropped'></div>
+			<div id="cell8" class='center-screen-column dropped'></div>
+			</div>
+			</div>
+			<div class='center-row-container'>
+			<div id="d_8"  class='center-row default-img dragable'>
+
+			</div>
+			<div id="d_9"  class='center-row default-img dragable'>
+
+			</div>
+			<div id="d_10"  class='center-row default-img dragable'>
+
+			</div>
+			<div id="d_11" class='center-row glovetouch-img dragable'>
+
+			</div>
+			<div id="d_12"  class='center-row microsd-img dragable'>
+
+			</div>
+			</div>
+			</div>
+			<div class='row-container'>
+			<div id="d_13" class='box-container right-side-space default-img dragable'>
+
+			</div>
+			<div  id="d_14" class='box-container right-side-space default-img dragable'>
+
+			</div>
+			<div id="d_15" class='box-container default-img dragable'>
+
+			</div>
+			</div>
+
+		</script>
+
+		<script type="text/html" id="landing_screen_entity">
+			<div class="row ">
 
 			</div>
 			<div class="row" style="margin-left: 7%;">
-				<textarea  class="input-create-screen" cols="30" rows="15" disabled="true" style="border-radius: 10px;"> testing</textarea>
+			<div  class="input-create-screen"  style="border-radius: 20px;">
+			<p> <span class="screen-title">Create Dream Fone </span></p>
+			<br />
+			<br />
+			<p>You can now create your dream fone by picking and choosing the features you like.</p>
+			<br />
+			<p>And not just that,you can even win a brand new ZenFone by creating your dream fone!</p>
+			<br />
+			<br />
 			</div>
-			<div class="row" style="margin-left: 21%;">
-				<button type="button" class="btn btn-default" id="create_dream_phone" >
-					Create Dream Phone
-				</button>
+			</div>
+			<div class="row" style="margin-left: 12%;margin-top: 5%;">
+			<button type="button" class="btn btn-default btn-base" id="create_dream_phone" >
+			Create Dream Phone
+			</button>
 
 			</div>
+
+		</script>
+
+		<script type="text/html" id="zoom_screen_entity">
+			<div class='center-screen-row' >
+			<div class='center-screen-column '></div>
+			<div  class='center-screen-column'></div>
+			<div  class='center-screen-column'></div>
+			</div>
+			<div class='center-screen-row' >
+			<div id="cell_0" class='center-screen-column '></div>
+			<div id="cell_1" class='center-screen-column '></div>
+			<div id="cell_2" class='center-screen-column '></div>
+			</div>
+			<div class='center-screen-row'>
+			<div id="cell_3" class='center-screen-column '></div>
+			<div id="cell_4" class='center-screen-column '></div>
+			<div id="cell_5" class='center-screen-column '></div>
+			</div>
+			<div class='center-screen-row'>
+			<div id="cell_6" class='center-screen-column '></div>
+			<div id="cell_7" class='center-screen-column '></div>
+			<div id="cell_8" class='center-screen-column '></div>
+			</div>
+			<div class='center-screen-row ' style="margin-left: 32%;">
+
+			<button type="button" class="btn btn-default btn-base" id="next_btn_zoom" >
+			Next
+			</button>
+			</div>
+
+		</script>
+
+		<script type="text/html" id="signup_screen_entity">
+			<div class="row screen-title">
+			Dream Fone
+
+			</div>
+			<div class="row" style="margin-left: 7%;">
+			<div  class="input-create-screen" style="border-radius: 10px;">
+
+			<p>Congratulations on creating your dream fone! You might actually get one for real.<br/> Enter your details and you can win a brand new ZenFone 6 on a lucky draw.  </p></div>
+			</div>
+			<div class="row" style="margin-left: 18%;">
+			<input type="text" placeholder=" Enter Name" />
+			</div>
+			<div class="row" style="margin-left: 18%;">
+			<input type="number" placeholder=" Enter Phone Number"/>
+			</div>
+			<div class="row" style="margin-left: 18%;">
+			<input type="email" placeholder=" Enter Email"/>
+			</div>
+			<div class="row" style="margin-left: 25%;">
+			<button type="button" class="btn btn-default btn-base" id="submit_details" >
+			SUBMIT
+			</button>
+
+			</div>
+		</script>
+		<script type="text/html" id="restart_screen_entity">
+			<div class="row screen-title">
+			Dream Fone
+
+			</div>
+			<div class="row" style="margin-left: 7%;">
+			<textarea  class="input-create-screen" cols="30" rows="9" disabled="true" style="border-radius: 10px;"> Thankyou for registration. </textarea>
+			</div>
+			<div class="row" style="margin-left: 25%;">
+			<button type="button" class="btn btn-default btn-base" id="restart_app" >
+			RESTART
+			</button>
+
+			</div>
+		</script>
+		<div id="loading"  data-role="page" class="container" style="display: block">
+			<h1> loading ...</h1>
 		</div>
+		<div id="landing" data-role="page" class="container" style="display: none"></div>
 		<div id="dreamfonecreation" class="container" style="display: none">
 			<div class="row">
 				<div class="col-sm-6 screen-title col-sm-offset-1">
@@ -214,153 +393,26 @@
 			</div>
 
 			<div class='main-conatiner' >
-				<div class='row-container first-row'>
-					<div id="d_0" class='box-container camera-img right-side-space dragable'></div>
-					<div id="d_1"class='box-container battery-img right-side-space dragable'>
 
-					</div>
-					<div id="d_2"  class='box-container dualsim-img dragable'>
-
-					</div>
-				</div>
-				<div class='row-container'>
-					<div class='center-row-container'>
-						<div id="d_3" class='center-row fullhd-img dragable' ></div>
-						<div id="d_4" class='center-row touchpanel-img dragable'></div>
-						<div id="d_5" class='center-row default-img dragable'>
-
-						</div>
-						<div id="d_6" class='center-row default-img dragable'>
-
-						</div>
-						<div id="d_7" class='center-row pixelmaster-img dragable'>
-
-						</div>
-					</div>
-					<div id="phn_img" class='second-row-center-column' >
-						<div class='center-screen-row'>
-							<div id="cell0" class='center-screen-column dropped'></div>
-							<div id="cell1" class='center-screen-column dropped'></div>
-							<div id="cell2" class='center-screen-column dropped'></div>
-						</div>
-						<div class='center-screen-row'>
-							<div id="cell3" class='center-screen-column dropped'></div>
-							<div id="cell4" class='center-screen-column dropped'></div>
-							<div id="cell5" class='center-screen-column dropped'></div>
-						</div>
-						<div class='center-screen-row'>
-							<div id="cell6" class='center-screen-column dropped'></div>
-							<div id="cell7" class='center-screen-column dropped'></div>
-							<div id="cell8" class='center-screen-column dropped'></div>
-						</div>
-					</div>
-					<div class='center-row-container'>
-						<div id="d_8"  class='center-row default-img dragable'>
-
-						</div>
-						<div id="d_9"  class='center-row default-img dragable'>
-
-						</div>
-						<div id="d_10"  class='center-row default-img dragable'>
-
-						</div>
-						<div id="d_11" class='center-row glovetouch-img dragable'>
-
-						</div>
-						<div id="d_12"  class='center-row microsd-img dragable'>
-
-						</div>
-					</div>
-				</div>
-				<div class='row-container'>
-					<div id="d_13" class='box-container right-side-space default-img dragable'>
-
-					</div>
-					<div  id="d_14" class='box-container right-side-space default-img dragable'>
-
-					</div>
-					<div id="d_15" class='box-container default-img dragable'>
-
-					</div>
-				</div>
 			</div>
 			<div class='next-btn-container'>
-				<div class='next-btn'>
+				<button type="button" class="btn btn-default btn-base" id="next_btn_fone" >
 					Next
-				</div>
+				</button>
 			</div>
 
 		</div>
-		<div id="dreamfonezoom" class="container" style="display: none">
-			<div id="zoomed-fone">
-				<div class='center-screen-row' >
-					<div class='center-screen-column '></div>
-					<div  class='center-screen-column'></div>
-					<div  class='center-screen-column'></div>
-				</div>
-				<div class='center-screen-row' >
-					<div id="cell_0" class='center-screen-column '></div>
-					<div id="cell_1" class='center-screen-column '></div>
-					<div id="cell_2" class='center-screen-column '></div>
-				</div>
-				<div class='center-screen-row'>
-					<div id="cell_3" class='center-screen-column '></div>
-					<div id="cell_4" class='center-screen-column '></div>
-					<div id="cell_5" class='center-screen-column '></div>
-				</div>
-				<div class='center-screen-row'>
-					<div id="cell_6" class='center-screen-column '></div>
-					<div id="cell_7" class='center-screen-column '></div>
-					<div id="cell_8" class='center-screen-column '></div>
-				</div>
-				<div class='center-screen-row '>
-					<div  class='next-btn' style="opacity: 0;" >
-						NEXT
-					</div>
-					<div  class='next-btn' style="opacity: 0;">
-						NEXT
-					</div>
-					<div id="next_btn_zoom" class='next-btn' style="opacity: 1;">
-						NEXT
-					</div>
-					<div  class='next-btn' style="opacity: 0;">
-						NEXT
-					</div>
-					<div  class='next-btn' style="opacity: 0;">
-						NEXT
-					</div>
-
-				</div>
-			</div>
+		<div id="dreamfonezoom" class="" style="display: none">
+			<div id="zoomed-fone"></div>
+			<div id="zoomed_fone_overlap"></div>
 
 		</div>
 		<div id="dreamfonesignup" class="container" style="display: none">
-			<div class="row screen-title">
-				Dream Fone
 
-			</div>
-			<div class="row" style="margin-left: 7%;">
-				<textarea  class="input-create-screen" cols="30" rows="9" disabled="true" style="border-radius: 10px;"> testing</textarea>
-			</div>
-			<div class="row" style="margin-left: 14%;">
-				<input type="text" placeholder=" Enter Name"/>  
-			</div>
-			<div class="row" style="margin-left: 14%;">
-				<input type="number" placeholder=" Enter Phone Number"/>  
-			</div>
-			<div class="row" style="margin-left: 14%;">
-				<input type="email" placeholder=" Enter Email"/>  
-			</div>
-			<div class="row" style="margin-left: 25%;">
-				<button type="button" class="btn btn-default" id="submit_details" >
-					SUBMIT
-				</button>
-
-			</div>
-			
-			
 		</div>
-		<div id="restart" class="container" style="display: none"></div>
+		<div id="restart" class="container" style="display: none">
+
+		</div>
 
 		<script src="js/jquery-1.9.1.js"></script>
 		<script src="js/jquery.hammer.js"></script>
@@ -368,7 +420,7 @@
 		<script src="js/bootstrap.min.js"></script>
 		<script src="js/misc.js"></script>
 		<script src="js/model.js"></script>
-
+		<script src="js/restart.js"></script>
 		<script src="js/signup.js"></script>
 		<script src="js/zoom.js"></script>
 		<script src="js/dreamphone.js"></script>

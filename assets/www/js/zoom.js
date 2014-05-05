@@ -14,6 +14,10 @@ ZoomFoneScreen.prototype = {
 
 	setUp : function() {
 		this.mApplication.showScreen(this.mDivName);
+		
+		$("#zoomed_fone_overlap").html($("#zoom_screen_entity").html());
+		
+		
 		trace(" Zoom :Phn .");
 		var mdata = resource_data.featurelist;
 		var i = 0,  arrFeatures=[];
